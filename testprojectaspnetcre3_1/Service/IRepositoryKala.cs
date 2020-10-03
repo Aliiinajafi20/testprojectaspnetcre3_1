@@ -6,7 +6,7 @@ using testprojectaspnetcre3_1.Data;
 
 namespace testprojectaspnetcre3_1.Service
 {
-    interface IRepositoryKala:IRepositoryBase<Kala>
+   public interface IRepositoryKala:IRepositoryBase<Kala>
     {
         
     }

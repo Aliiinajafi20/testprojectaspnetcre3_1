@@ -8,10 +8,11 @@ namespace testprojectaspnetcre3_1.Models
 {
     public class DetailsViewModelKala
     {
-        [Key]
+        [Display(Name ="کد کالا")]
         public int KalaId { get; set; }
-        [Required]
+        [Display(Name = "نام کالا")]
         public string KalaName { get; set; }
+        [Display(Name = "قیمت کالا")]
         public int KalaPrice { get; set; }
 
 

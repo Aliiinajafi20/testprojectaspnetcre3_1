@@ -1,0 +1,49 @@
+﻿@model IEnumerable<testprojectaspnetcre3_1.Models.DetailsViewModelKala>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KalaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KalaName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KalaPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KalaId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KalaName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KalaPrice)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.KalaId">edit</a>|
+                    <a asp-action="Details" asp-route-id="@item.KalaId">Details</a>|
+                    <a asp-action="Delete" asp-route-id="@item.KalaId" onclick="return confirm('آیا از پاک کردن اطلاعات مطمئن هستید؟')">Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
